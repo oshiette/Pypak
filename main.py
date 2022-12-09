@@ -1,16 +1,9 @@
-print('Введите n')
-n = int(input())
-if n == 0:
-    print(0)
-elif n == 1:
-    print(1)
-else:
-    F1 = 0
-    F2 = 1
-    i = 1
-    Fn = 0
-    while n > i:
-        Fn = F1 + F2
-        F1, F2 = F2, Fn
-        i += 1
-    print(Fn)
+n = int(input('Введите длину ряда: '))
+f1 = f2 = 1
+
+i = 2
+while i < n:
+	f1, f2 = f2, f1 + f2
+	print(f2, end=' ')
+	i += 1
+print()
